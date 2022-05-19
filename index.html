@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calculadora de Gorjetas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/styles.css'>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <h1 class="tittle">Calculadora de Gorjetas</h1>
+        </div>
+        <div>
+            <form class="tipsform" id="tipsForm">
+                <label for="bill">
+                    <p>Total da Conta</p>
+                </label>
+                <p>
+                    €<input type="decimal" placeholder="Introduza o montante" name="bill" id="bill" class="formInput" required>
+                </p>
+                <label for="quality">
+                    <p>Avalie o Serviço</p>
+                </label>
+                <p>
+                    <select name="quality" id="quality" class="formSelect" required>
+                        <option disabled selected>--Escolha a uma opção</option>
+                        <option value="0.02">2% - Péssimo</option>
+                        <option value="0.03">3% - Mau</option>
+                        <option value="0.05">5% - Aceitável</option>
+                        <option value="0.08">8% - Bom</option>
+                        <option value="0.1">10% - Muito Bom</option>
+                    </select>
+                </p>
+                <label for="people">
+                    <p>Qual o número de pessoas que vão dividir a conta</p>
+                </label>
+                <p>
+                    <input type="number" placeholder="Introduza um número" name="people" id="people" class="formInput" required>pessoa(s)
+                </p>
+                <button type="submit" class="formSubmit">Calcular!</button>
+            </form>
+        </div>
+        <div id="totalTip">
+            Gorjeta Total:
+            €<span id="tip">0.00</span>
+            <span id="each">cada</span>
+        </div>
+    </div>
+
+    <script type="text/javascript" src='scripts.js'></script>
+</body>
+</html>
